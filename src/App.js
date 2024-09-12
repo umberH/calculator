@@ -1,5 +1,6 @@
 // App.js
 import React, { useState } from 'react';
+import "./styles.css";
 
 function App() {
   // Define state variables for user inputs
