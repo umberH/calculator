@@ -1,7 +1,8 @@
 /* App.css */
 body {
   font-family: "Arial", sans-serif;
-  background-color: #f0f2f5;
+  background-color: #ffffff; /* Use a light background for better readability */
+  color: #333333; /* Dark text for good contrast */
   margin: 0;
   padding: 0;
 }
@@ -15,29 +16,31 @@ body {
 h1 {
   font-size: 2.5em;
   margin-bottom: 20px;
-  color: #333;
+  color: #333333; /* High-contrast dark color for text */
 }
 
 input {
   width: 100%;
   padding: 10px;
   margin: 10px 0;
-  border: 1px solid #ccc;
+  border: 1px solid #333333; /* Darker border for better visibility */
   border-radius: 5px;
   font-size: 1em;
+  color: #333333; /* Ensure text inside the input is dark and readable */
+  background-color: #f9f9f9; /* Light background inside inputs for readability */
 }
 
 label {
   font-size: 1.2em;
   font-weight: bold;
-  color: #555;
+  color: #222222; /* Strong color for labels */
   display: block;
   margin-bottom: 5px;
 }
 
 button {
-  background-color: #28a745;
-  color: white;
+  background-color: #007bff; /* Strong blue for high contrast */
+  color: white; /* White text for contrast on the blue background */
   padding: 12px 20px;
   border: none;
   border-radius: 5px;
@@ -47,7 +50,7 @@ button {
 }
 
 button:hover {
-  background-color: #218838;
+  background-color: #0056b3; /* Darker blue on hover for emphasis */
 }
 
 div {
@@ -59,7 +62,7 @@ div {
 
 h2 {
   font-size: 1.8em;
-  color: #333;
+  color: #333333; /* Ensure headings are easily readable */
   margin-top: 30px;
 }
 
