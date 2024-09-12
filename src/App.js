@@ -1,5 +1,6 @@
 // App.js
-import React, { useState } from 'react';
+import React, { useState } from "react";
+import "./styles.css";
 
 function App() {
   // Define state variables for user inputs
@@ -9,12 +10,12 @@ function App() {
   const [roi, setRoi] = useState(0);
   const [incomeGrowthRate, setIncomeGrowthRate] = useState(0);
   const [expenseGrowthRate, setExpenseGrowthRate] = useState(0);
-  const [yearsToBillionaire, setYearsToBillionaire] = useState(null);
+  const [yearsToMillionaire, setYearsToMillionaire] = useState(null);
 
-  const calculateYearsToBillionaire = () => {
+  const calculateYearsToMillionaire = () => {
     let currentWealth = parseFloat(startingWealth);
     let income = parseFloat(annualIncome);
-    const targetWealth = 1000000000; // 1 Billion
+    const targetWealth = 1000000; // 1 Million
     const annualSavingsRate = parseFloat(savingsRate) / 100;
     const annualRoi = parseFloat(roi) / 100;
     const incomeGrowth = parseFloat(incomeGrowthRate) / 100;
@@ -34,15 +35,15 @@ function App() {
     }
 
     if (currentWealth >= targetWealth) {
-      setYearsToBillionaire(year);
+      setYearsToMillionaire(year);
     } else {
-      setYearsToBillionaire("More than 100 years");
+      setYearsToMillionaire("More than 100 years");
     }
   };
 
   return (
     <div className="App">
-      <h1>Billionaire Calculator</h1>
+      <h1>Millionaire Calculator</h1>
 
       <div>
         <label>Starting Wealth ($):</label>
@@ -98,10 +99,10 @@ function App() {
         />
       </div>
 
-      <button onClick={calculateYearsToBillionaire}>Calculate</button>
+      <button onClick={calculateYearsToMillionaire}>Calculate</button>
 
-      {yearsToBillionaire !== null && (
-        <h2>Years to become a Billionaire: {yearsToBillionaire}</h2>
+      {yearsToMillionaire !== null && (
+        <h2>Years to become a Millionaire: {yearsToMillionaire}</h2>
       )}
     </div>
   );
