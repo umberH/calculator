@@ -1,9 +1,8 @@
 // App.js
 import React, { useState } from "react";
-import "./styles.css";
+import "./App.css"; // Assuming you have the CSS file for styling
 
 function App() {
-  // Define state variables for user inputs
   const [startingWealth, setStartingWealth] = useState(0);
   const [annualIncome, setAnnualIncome] = useState(0);
   const [savingsRate, setSavingsRate] = useState(0);
@@ -28,7 +27,7 @@ function App() {
       const netInvestment = income * annualSavingsRate;
       currentWealth = currentWealth * (1 + annualRoi) + netInvestment;
 
-      // Increase income and expenses for next year
+      // Increase income for next year
       income = income * (1 + incomeGrowth);
 
       year++;
@@ -46,8 +45,9 @@ function App() {
       <h1>Millionaire Calculator</h1>
 
       <div>
-        <label>Starting Wealth ($):</label>
+        <label htmlFor="startingWealth">Starting Wealth ($):</label>
         <input
+          id="startingWealth"
           type="number"
           value={startingWealth}
           onChange={(e) => setStartingWealth(e.target.value)}
@@ -55,8 +55,9 @@ function App() {
       </div>
 
       <div>
-        <label>Annual Income ($):</label>
+        <label htmlFor="annualIncome">Annual Income ($):</label>
         <input
+          id="annualIncome"
           type="number"
           value={annualIncome}
           onChange={(e) => setAnnualIncome(e.target.value)}
@@ -64,8 +65,9 @@ function App() {
       </div>
 
       <div>
-        <label>Savings Rate (%):</label>
+        <label htmlFor="savingsRate">Savings Rate (%):</label>
         <input
+          id="savingsRate"
           type="number"
           value={savingsRate}
           onChange={(e) => setSavingsRate(e.target.value)}
@@ -73,8 +75,9 @@ function App() {
       </div>
 
       <div>
-        <label>Return on Investment (ROI) (%):</label>
+        <label htmlFor="roi">Return on Investment (ROI) (%):</label>
         <input
+          id="roi"
           type="number"
           value={roi}
           onChange={(e) => setRoi(e.target.value)}
@@ -82,8 +85,11 @@ function App() {
       </div>
 
       <div>
-        <label>Income Growth Rate (% per year):</label>
+        <label htmlFor="incomeGrowthRate">
+          Income Growth Rate (% per year):
+        </label>
         <input
+          id="incomeGrowthRate"
           type="number"
           value={incomeGrowthRate}
           onChange={(e) => setIncomeGrowthRate(e.target.value)}
@@ -91,8 +97,11 @@ function App() {
       </div>
 
       <div>
-        <label>Expense Growth Rate (% per year):</label>
+        <label htmlFor="expenseGrowthRate">
+          Expense Growth Rate (% per year):
+        </label>
         <input
+          id="expenseGrowthRate"
           type="number"
           value={expenseGrowthRate}
           onChange={(e) => setExpenseGrowthRate(e.target.value)}
